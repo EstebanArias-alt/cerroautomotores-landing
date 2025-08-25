@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hero-center-40 { background-position: 40% center !important; }
+
+html, body { height: 100%; }
+body { margin: 0; background: #0B0F14; color: #fff; } /* bg-brand-dark */

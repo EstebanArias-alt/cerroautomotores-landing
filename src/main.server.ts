@@ -1,7 +1,12 @@
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
+import { AppComponent } from './app/AppComponent';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { App } from './app/app';
-import { config } from './app/app.config.server';
+import 'zone.js/node';
 
-const bootstrap = () => bootstrapApplication(App, config);
 
-export default bootstrap;
+export default function bootstrap() {
+  return bootstrapApplication(AppComponent, {
+    providers: [provideRouter(routes)]
+  });
+}
