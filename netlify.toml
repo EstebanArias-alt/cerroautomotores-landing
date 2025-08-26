@@ -1,15 +1,12 @@
 [build]
-  command = "npm ci && ng build --configuration=production"
+  command = "npm ci && ng build --configuration=production --prerender --output-mode=browser"
   publish = "dist/cerroautomotores-landing/browser"
 
-
-# Fallback SPA por si luego agregás rutas de Angular
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Cache agresivo para assets (puede quedar así)
 [[headers]]
   for = "/assets/*"
   [headers.values]
